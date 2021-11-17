@@ -1,0 +1,31 @@
+{
+  "name": "sprint6",
+  "version": "1.0.0",
+  "description": "Desenvolvimento do projeto da sprint 6.",
+  "main": "index.js",
+  "dependencies": {
+    "ajv": "^8.8.1",
+    "cypress": "^9.0.0",
+    "faker": "^5.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "cy:open": "npx cypress open --config watchForFileChanges=false",
+    "cy:run": "npx cypress run",
+    "test": "npx cypress open",
+    "report:cleanup": "rm -fr cypress/report/",
+    "test:e2e": "cypress run --headless --browser chrome --no-exit",
+    "report:generate": "marge cypress/report/output.json --reportDir ./ --inline",
+    "report:merge": "mochawesome-merge cypress/report/mochawesome-report/*.json > cypress/report/output.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annahaubert/SPRINT6.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/annahaubert/SPRINT6/issues"
+  },
+  "homepage": "https://github.com/annahaubert/SPRINT6#readme"
+}
