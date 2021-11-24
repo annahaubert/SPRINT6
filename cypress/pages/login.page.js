@@ -1,36 +1,29 @@
 import Base from './_base.page'
+
 import { LOGIN } from './components/login.elements'
 
-export default class LoginSite extends Base {
-    static acesso() {
+export default class login extends Base {
+    static acessarSite() {
         cy.visit(LOGIN.URL)
     }
 
-    static logar() {
-        super.typeValue(LOGIN.USERNAME, 'ana@teste.com')
-        super.typeValue(LOGIN.PASSWORD, 'teste')
-        super.clickOnElement(LOGIN.BOTAO_LOGIN)
+    static realizarLogin() {
+        super.clickOnElement(LOGIN.LOGIN)
+        super.clickOnElement(LOGIN.REALIZAR_LOGIN)
+        super.typeValue(LOGIN.EMAIL, 'ana@teste.com')
+        super.clickOnElement(LOGIN.CONTINUAR)
+        super.typeValue(LOGIN.SENHA, 'TesteAna01')
+        super.clickOnElement(LOGIN.CONTINUAR)
     }
 
-    static loginCorreto() {
-        super.clickOnElement(LOGIN.BOTAO_LOGIN)
-        super.validarUrl(LOGIN.URL)
-    }
-
-    static loginIncorreto() {
-        super.typeValue(LOGIN.USERNAME, 'asssd@qa.com')
-        super.typeValue(LOGIN.PASSWORD, 'ssss')
-        super.clickOnElement(LOGIN.BOTAO_LOGIN)
-
-        super.verifyIfElementExists(LOGIN.ALERTA_ERRO)
-
-    }
-
-    static elementosDaPagina() {
-        super.verifyIfElementExists(LOGIN.ATRIBUTOS_EMAIL)
-        super.verifyIfElementExists(LOGIN.ATRIBUTOS_SENHA)
-        super.getElement(LOGIN.BOTAO_CADASTRAR).first().should('contain', 'Entrar')
-
+    static naoRealizarLogin() {
+        super.clickOnElement(LOGIN.LOGIN)
+        super.clickOnElement(LOGIN.REALIZAR_LOGIN)
+        super.typeValue(LOGIN.EMAIL, 'ana@teste.com')
+        super.clickOnElement(LOGIN.CONTINUAR)
+        super.typeValue(LOGIN.SENHA, 'TesteAna02')
+        super.clickOnElement(LOGIN.CONTINUAR)
+        super.verifyIfElementExists(LOGIN.ERRO)
     }
 
 }

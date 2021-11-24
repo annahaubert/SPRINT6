@@ -1,11 +1,9 @@
 export const LOGIN = {
     URL: "https://701523.commercesuite.com.br",
-    BOTAO_LOGIN: "[data-testid='entrar']",
-    USERNAME: "[data-testid='email']",
-    PASSWORD: "[data-testid='senha']",
-    ALERTA_ERRO: "[class='alert alert-secondary alert-dismissible']",
-    ATRIBUTOS_EMAIL: "[data-testid='email']",
-    ATRIBUTOS_SENHA: "[data-testid='senha']",
-    BOTAO_CADASTRAR: "[class='btn btn-primary']"
-
+    LOGIN: "[class='modal-login']",
+    REALIZAR_LOGIN: "[class='botao-commerce botao-efetuar-login']",
+    EMAIL: "[id='input-email']",
+    CONTINUAR: "[class='tray-btn-primary']",
+    SENHA: "[id='input-password']",
+    ERRO: "[class='tray-error-message']"
 }

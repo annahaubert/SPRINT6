@@ -1,0 +1,31 @@
+export const CADASTRO = {
+    URL: "https://701523.commercesuite.com.br",
+    CADASTRO_SITE: "[data-tray-tst='cadastro']",
+    PESSOA_FISICA: "[id='PessoaFisica']",
+    RAZAO_SOCIAL: "[id='razao_social']",
+    PESSOA_JURIDICA: "[id='PessoaJuridica']",
+    INSCRICAO_ESTADUAL: "[id='ie']",
+    NOME_CLIENTE: "[id='pf_nome_cliente']",
+    NOME_CLIENTE_PJ: "[id='pj_nome_cliente']",
+    DATA_NASCIMENTO: "[id='pf_data_nascimento']",
+    DATA_NASCIMENTO_PJ: "[id='pj_data_nascimento']",
+    CPF_CLIENTE: "[id='pf_cpf_cliente']",
+    CPF_CLIENTE_PJ: "[id='pj_cpf_cliente']",
+    CNPJ_CLIENTE: "[id='cnpj']",
+    EMAIL_CLIENTE: "[id='email_cliente']",
+    EMAIL_CONFIRMACAO: "[id='email_cliente2']",
+    SENHA_CLIENTE: "[id='senha_cliente']",
+    SENHA_CONFIRMACAO: "[id='senha_cliente2']",
+    TELEFONE_FIXO: "[id='telefone_cliente']",
+    TELEFONE_CELULAR: "[id='telefone_cliente_2']",
+    CEP_CAIXA1: "[id='cep_1']",
+    CEP_CAIXA2: "[id='cep_2']",
+    ENDERECO: "[id='numero_endereco']",
+    NUMERO_CASA: "[id='numero_endereco']",
+    BAIRRO: "[id='bairro_cliente']",
+    ESTADO: "[id='estado_cliente']",
+    BTTNAVANCAR: "[class='botao-commerce-img']",
+    ERRO: "[id='pf_nome_cliente_erro']"
+    
+
+}
