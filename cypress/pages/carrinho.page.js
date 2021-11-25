@@ -11,7 +11,8 @@ export default class carrinho extends Base {
         super.clickOnElement(CARRINHO.ADICIONAR_PRODUTO)
         super.clickOnElement(CARRINHO.CARRINHO)
         super.verifyIfElementExists(CARRINHO.PRODUTO)
-       // super.clickOnElement(CARRINHO.FINALIZAR_PEDIDO)
+        super.clickOnElement(CARRINHO.FINALIZAR_PEDIDO)
+        super.validarUrl(CARRINHO.FINAL)
     }
 
     static semProdutos() {
